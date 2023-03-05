@@ -7,6 +7,10 @@ class CarSchema extends Schema {
   up () {
     this.create('cars', (table) => {
       table.increments()
+      table.string('brand',80);
+      table.string('model',80);
+      table.string('color',80);
+      table.integer('year');
       table.timestamps()
     })
   }

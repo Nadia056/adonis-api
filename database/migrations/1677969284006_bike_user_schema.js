@@ -7,6 +7,8 @@ class BikeUserSchema extends Schema {
   up () {
     this.create('bike_users', (table) => {
       table.increments()
+      table.integer('user_id').unsigned().references('id').inTable('clients');
+      table.integer('bike_id').unsigned().references('id').inTable('bikes');
       table.timestamps()
     })
   }
