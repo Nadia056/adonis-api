@@ -4,6 +4,9 @@
 const Model = use('Model')
 
 class Car extends Model {
+  static get fillable() {
+    return ['brand', 'model', 'year', 'color']
+  }
 }
 
 module.exports = Car
